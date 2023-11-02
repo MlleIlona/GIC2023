@@ -1,7 +1,7 @@
 <template>
     <button :style="{ backgroundColor: color }">
       {{ text }}
-      <font-awesome-icon icon="right-arrow" class="font" />
+      <font-awesome-icon icon="phone" class="font" />
       <!-- <i class="fas fa-arrow-right"></i> -->
     </button>
   </template>
