@@ -11,11 +11,15 @@
 </template>
 
 <script>
-
+import { productStore } from '../store/product';
 import MyButton from './MyButton.vue';
 
 export default {
   name: "Promotion",
+  setup() {
+        const store = productStore();
+        return { productStore }
+    },
   props: ["text","color","CButton","TButton","img"],
   components: {
     MyButton,

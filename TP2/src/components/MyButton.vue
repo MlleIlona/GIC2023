@@ -1,15 +1,21 @@
 <template>
     <button :style="{ backgroundColor: color }">
       {{ text }}
-      <font-awesome-icon icon="phone" class="font" />
+      <font-awesome-icon :icon="['fas', 'arrow-right']" class="font"/>
       <!-- <i class="fas fa-arrow-right"></i> -->
     </button>
   </template>
   
-  <script>
+  <script>  
+
+  import { productStore } from '../store/product';
 
   export default {
     name: "MyButton",
+    setup() {
+        const store = productStore();
+        return { productStore }
+    },
     props: ["text", "color"],
   };
 

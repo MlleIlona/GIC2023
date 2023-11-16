@@ -9,9 +9,14 @@
 </template>
 
 <script>
+  import { productStore } from '../store/product';
 
   export default {
     name: "Category",
+    setup() {
+        const store = productStore();
+        return { productStore }
+    },
     props: ["color", "text1", "text2","picture"],
   };
   
